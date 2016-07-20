@@ -5,8 +5,11 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
-		<title>虹木护生</title>
+		<title>放生</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<script src="js/slideshow.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -18,7 +21,7 @@
 						<img src="http://usr.im/140x50?text=logo" width="140" height="48">
 					</div>
 					<div class="head_nav_content">
-						<ul>
+						<ul id="nav_one">
 							<li>
 								<a href="index.html">首页</a>
 							</li>
@@ -26,10 +29,10 @@
 								<a href="article.html">文摘</a>
 							</li>
 							<li>
-								<a href="getfree.html">放生</a>
+								<a href="getfree.html" class="current">放生</a>
 							</li>
 							<li>
-								<a href="#">我的</a>
+								<a href="mine.html">我的</a>
 							</li>
 						</ul>
 					</div>
@@ -42,8 +45,8 @@
 					<!--左导航-->
 					<!--单击后，添加class：l_active-->
 					<div class="left_nav">
-						<ul>
-							<li>文摘分类</li>
+						<ul id="nav_two">
+							<h3>文摘分类</h3>
 							<li>
 								<a href="#">开示</a>
 							</li>
@@ -73,6 +76,58 @@
 
 					<!--内容-->
 					<div class="content_article">
+						<!--轮播图-->
+						<div class="comiis_wrapad" id="slideContainer">
+
+							<ul class="slideshow" id="slidesImgs">
+								<li>
+									<a href="#" target="_blank">
+										<img src="img/1.jpg" width="600" height="300" alt="" /></a>
+									<span class="title">ssss</span></li>
+								<li>
+									<a href="#" target="_blank">
+										<img src="img/2.jpg" width="600" height="300" alt="" /></a>
+									<span class="title">sssss</span></li>
+								<li>
+									<a href="#" target="_blank">
+										<img src="img/3.jpg" width="600" height="300" alt="" /></a>
+									<span class="title">sssss</span></li>
+								<li>
+									<a href="#" target="_blank">
+										<img src="img/3.jpg" width="600" height="300" alt="" /></a>
+									<span class="title">ssss</span></li>
+								<li>
+									<a href="#" target="_blank">
+										<img src="img/2.jpg" width="600" height="300" alt="" /></a>
+									<span class="title">sss</span></li>
+
+							</ul>
+
+							<div class="slidebar" id="slideBar">
+								<ul class="two">
+									<li class="on">1</li>
+									<li>2</li>
+									<li>3</li>
+									<li>4</li>
+									<li>5</li>
+								</ul>
+							</div>
+
+						</div>
+						<script type="text/javascript">
+							SlideShow(3000);
+						</script>
+						<!--轮播结束-->
+						<!--放生广播-->
+						<div class="broadcast">
+							<div class="broadcast_title">
+								<label class="txt_color">放生广播</label>
+							</div>
+							<div class="broadcast_txt">
+								XXX随喜100元，愿平安喜乐
+							</div>
+							
+						</div>
 						<!--放生-->
 						<ul>
 							<li>
@@ -83,15 +138,21 @@
 										</div>
 										<div class="box_content">
 											<img src="http://usr.im/560x320?text=logo" />
-											<label>一元放生群(长沙)</label>
-											<p><span></span>杨细荣<span class="ca_border">已认证</span></p>
-											<p><span></span>解放西路口湘江边</p>
-											<p class="line_block"><span></span>2016年08月07日 09点30分</p>
+											<label>
+												       一元放生群(长沙)
+												<p>
+													<span class="iconfont icon-wode"></span>
+													杨细荣<span class="ca_border">已认证</span>
+												</p>
+											</label>
+											<p><span class="iconfont icon-dizhi"></span>解放西路口湘江边</p>
+											<p class="line_block"><span class="iconfont icon-shijian"></span>2016年08月07日 09点30分</p>
 											<p class="float_right">目前参与<b>9</b>人随喜<b>930</b>元</p>
 										</div>
 									</div>
 								</a>
 							</li>
+							
 							<li>
 								<a href="getfree_content.html">
 									<div class="article_box">
@@ -100,10 +161,15 @@
 										</div>
 										<div class="box_content">
 											<img src="http://usr.im/560x320?text=logo" />
-											<label>一元放生群(长沙)</label>
-											<p><span></span>杨细荣<span class="ca_border">已认证</span></p>
-											<p><span></span>解放西路口湘江边</p>
-											<p class="line_block"><span></span>2016年08月07日 09点30分</p>
+											<label>
+												       一元放生群(长沙)
+												<p>
+													<span class="iconfont icon-wode"></span>
+													杨细荣<span class="ca_border">已认证</span>
+												</p>
+											</label>
+											<p><span class="iconfont icon-dizhi"></span>解放西路口湘江边</p>
+											<p class="line_block"><span class="iconfont icon-shijian"></span>2016年08月07日 09点30分</p>
 											<p class="float_right">目前参与<b>9</b>人随喜<b>930</b>元</p>
 										</div>
 									</div>
@@ -121,14 +187,5 @@
 			</div>
 		</div>
 	</body>
-	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('.head_nav_content li a').each(function() {
-				if($($(this))[0].href == String(window.location))
-					$(this).addClass('active');
-			});
-		})
-	</script>
 
 </html>
