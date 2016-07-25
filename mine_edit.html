@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script src="js/slideshow.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="content">
+			<!--顶部导航栏-->
+			<div class="_global_nav _global_nav_alpha bg_color">
+				<div class="head_nav">
+					<div class="logo">
+						<img src="http://usr.im/140x50?text=logo" width="140" height="48">
+					</div>
+					<div class="head_nav_content">
+						<ul id="nav_one">
+							<li>
+								<a href="index.html">首页</a>
+							</li>
+							<li>
+								<a href="article.html">文摘</a>
+							</li>
+							<li>
+								<a href="getfree.html">放生</a>
+							</li>
+							<li>
+								<a href="mine.html">我的</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content_body">
+
+				<div class="content_frame">
+
+					<!--左导航-->
+					<div class="left_nav">
+						<ul id="nav_two">
+							<h3>文摘分类</h3>
+							<li class="current">
+								<a href="#">开示</a>
+							</li>
+							<li>
+								<a href="#">轮回</a>
+							</li>
+							<li>
+								<a href="#">经典</a>
+							</li>
+							<li>
+								<a href="#">养生</a>
+							</li>
+							<li>
+								<a href="#">百科</a>
+							</li>
+							<li>
+								<a href="#">放生</a>
+							</li>
+							<li>
+								<a href="#">辟谷</a>
+							</li>
+							<li>
+								<a href="#">共修</a>
+							</li>
+						</ul>
+					</div>
+
+					<!--内容-->
+					<div class="content_article">
+						<div class="personal_center">
+							<a href="#" class="personal_style_one">
+								<img src="img/1.jpg" width="100%" height="100%" />
+							</a>
+
+							<div class="personal_style_two">
+								<h3>吴叔叔</h3>
+								<span>0积分<i class="iconfont icon-shezhi right"></i></span>
+							</div>
+
+						</div>
+
+						<div class="personal_edit">
+
+							<form>
+								<table cellspacing="0" cellpadding="0" class="tfm">
+									<tr>
+										<th>昵称</th>
+										<td><input type="text" name="nickname" id="nickname" value="" /></td>
+									</tr>
+									<tr>
+										<th>性别</th>
+										<td>
+											<select name="sex">
+												<option value="0">男</option>
+												<option value="1">女</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>生日</th>
+										<td><input type="text" id="date" value="" /></td>
+									</tr>
+									<tr>
+										<th>所在地</th>
+										<td>
+											<select name="">
+												<option value="">省份</option>
+											</select>
+											<select name="">
+												<option value="">市</option>
+											</select>
+											<select name="">
+												<option value="">区</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>QQ</th>
+										<td><input type="text" name="qq" id="qq" value="" /></td>
+									</tr>
+									<tr>
+										<th>微信</th>
+										<td><input type="text" name="weixin" id="weixin" value="" /></td>
+									</tr>
+									<tr>
+										<th>邮箱</th>
+										<td><input type="email" name="email" id="email" value="" /></td>
+									</tr>
+									<tr>
+										<th>个性签名</th>
+										<td><textarea name="" rows="3" style="width: 330PX;"></textarea></td>
+									</tr>
+									<tr>
+										<th></th>
+										<td><input type="submit" value="修改" /></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--右侧logo-->
+			<div class="logo_box">
+				<img src="http://usr.im/185x185?text=logo" />
+				<p>微信扫一扫“立即关注”</p>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.head_nav_content li a').each(function() {
+				if($($(this))[0].href == String(window.location))
+					$(this).addClass('active');
+			});
+		})
+	</script>
+
+</html>

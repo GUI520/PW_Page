@@ -5,15 +5,17 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
-		<title></title>
+		<title>个人中心</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<script src="js/slideshow.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
 		<div class="content">
 			<!--顶部导航栏-->
 			<div class="_global_nav _global_nav_alpha bg_color">
+
 				<div class="head_nav">
 					<div class="logo">
 						<img src="http://usr.im/140x50?text=logo" width="140" height="48">
@@ -21,7 +23,7 @@
 					<div class="head_nav_content">
 						<ul id="nav_one">
 							<li>
-								<a href="index.html" >首页</a>
+								<a href="index.html">首页</a>
 							</li>
 							<li>
 								<a href="article.html">文摘</a>
@@ -29,12 +31,29 @@
 							<li>
 								<a href="getfree.html">放生</a>
 							</li>
-							<li>
-								<a href="mine.html" class="current">我的</a>
+							<li onclick="login_up()">
+								<a class="current">我的</a>
 							</li>
 						</ul>
 					</div>
 				</div>
+			</div>
+			<!--登陆-->
+			<div id="light_one" class="login_content">
+				<h3>账号登录</h3>
+				<div class="pop_login">
+					<label>手机号码</label>
+					<input type="text" placeholder="请输入手机号码" />
+				</div>
+				<div class="pop_login">
+					<label>账号密码</label>
+					<input type="password" placeholder="请输入你的密码" />
+				</div>
+				<button>确定登录</button>
+				<a href="#">忘记密码</a>
+			</div>
+			<div id="fade_one" class="login_overlay">
+				<a onclick="login_pop_up()"></a>
 			</div>
 			<div class="content_body">
 
@@ -42,7 +61,7 @@
 
 					<!--左导航-->
 					<div class="left_nav">
-						<ul id="Menu">
+						<ul id="nav_two">
 							<h3>文摘分类</h3>
 							<li class="current">
 								<a href="#">开示</a>
@@ -81,59 +100,64 @@
 
 							<div class="personal_style_two">
 								<h3>吴叔叔</h3>
-								<span>0积分<i class="iconfont icon-shezhi right"></i></span>
+								<span>0积分 <a href="mine_edit.html"><i class="iconfont icon-shezhi right"></i></a></span>
 							</div>
 							<div class="personal_initiate">
 								<span>放生</span>
-								<button>立即发起></button>
+								<a href="getfree_publish.html"><button>立即发起></button></a>
+
 							</div>
 							<div class="personal_audit">
 								<ul>
 									<li>
-										<i class="iconfont icon-zhifu"></i>
-										<p>未审核的支付</p>
+										<a href="mine_check.html">
+											<i class="iconfont icon-zhifu"></i>
+											<p>未审核的支付</p>
+										</a>
 									</li>
 									<li>
-										<i class="iconfont icon-duoqicanyu"></i>
-										<p>我参与的放生</p>
-
+										<a href="mine_attend.html">
+											<i class="iconfont icon-duoqicanyu"></i>
+											<p>我参与的放生</p>
+										</a>
 									</li>
 									<li>
-										<i class="iconfont icon-yijieshu"></i>
-										<p>我发起的放生</p>
+										<a href="mine_start.html">
+											<i class="iconfont icon-yijieshu"></i>
+											<p>我发起的放生</p>
+										</a>
 									</li>
 								</ul>
 
 							</div>
-							
+
 							<div class="personal_function">
 								<ul>
 									<li>
-										<i class="iconfont icon-taolun"></i>
-										我的消息
+										<a href="mine_message.html">
+											<i class="iconfont icon-taolun"></i> 我的消息
+										</a>
+
 									</li>
 									<li>
-										<i class="iconfont icon-wodeshoucang"></i>
-										我的收藏
-									</li>
-									<li>
-										<i class="iconfont icon-kefu"></i>
-									          客服电话
-										<a href="#">
-											153-8892-2592
+										<a href="mine_favorite.html">
+											<i class="iconfont icon-wodeshoucang"></i> 我的收藏
 										</a>
 									</li>
 									<li>
-										<i class="iconfont icon-yijian"></i>
-										
-										意见反映
+										<a href="tel:15388922592">
+											<i class="iconfont icon-kefu"></i> 客服电话&nbsp;&nbsp;&nbsp;&nbsp;
+											<span class="txt_color">153-8892-2592</span>
+										</a>
 									</li>
 									<li>
-										<i class="iconfont icon-guanyuwomen"></i>
-										关于我们
+										<i class="iconfont icon-yijian"></i> 意见反映
+									</li>
+									<li>
+										<i class="iconfont icon-guanyuwomen"></i> 关于我们
 									</li>
 								</ul>
-								
+
 							</div>
 						</div>
 					</div>

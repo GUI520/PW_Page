@@ -7,6 +7,8 @@
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
 		<title>文摘详情</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<script src="js/slideshow.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -18,7 +20,7 @@
 						<img src="http://usr.im/140x50?text=logo" width="140" height="48">
 					</div>
 					<div class="head_nav_content">
-						<ul>
+						<ul id="nav_one">
 							<li>
 								<a href="index.html">首页</a>
 							</li>
@@ -41,10 +43,10 @@
 
 					<!--左导航-->
 					<div class="left_nav">
-						<ul>
-							<li>文摘分类</li>
+						<ul id="nav_two">
+							<h3>文摘分类</h3>
 							<li>
-								<a href="#">开示</a>
+								<a href="#" class="current_one">开示</a>
 							</li>
 							<li>
 								<a href="#">轮回</a>
@@ -87,9 +89,9 @@
 								<div class="tag_article">
 									<button>#涅槃</button>
 									<p>
-										<a href="#"><img src="http://usr.im/25x25?text=logo" /></a>
+										<a href="#"><i class="iconfont icon-taolun"></i></a>
 										<span>200</span>
-										<a href="#"><img src="http://usr.im/25x25?text=logo" /></a>
+										<a href="#"><i class="iconfont icon-icon47"></i></a>
 									</p>
 								</div>
 							</div>
@@ -99,6 +101,12 @@
 							<div class="tag_head txt_centent">
 								热门留言
 							</div>
+							<div class="comment_sub">
+								<form>
+									<textarea name="" rows="5" cols=""></textarea>
+									<input type="submit" value="发布留言" />
+								</form>
+							</div>
 							<div class="box_content">
 								<ul class="commentList">
 									<li>
@@ -107,7 +115,7 @@
 												<img src="http://usr.im/30x30?text=logo" />
 											</div>
 											<div class="comment_content">
-												
+
 												<span>logo</span>
 												<span class="float_right"><a></a><em>300</em></span>
 												<p>XXXXX</p>
@@ -121,7 +129,7 @@
 												<img src="http://usr.im/30x30?text=logo" />
 											</div>
 											<div class="comment_content">
-												
+
 												<span>logo</span>
 												<span class="float_right"><a></a><em>300</em></span>
 												<p>XXXXX</p>

@@ -5,8 +5,10 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
-		<title>文摘</title>
+		<title>收藏</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<script src="js/slideshow.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -18,7 +20,7 @@
 						<img src="http://usr.im/140x50?text=logo" width="140" height="48">
 					</div>
 					<div class="head_nav_content">
-						<ul>
+						<ul id="nav_one">
 							<li>
 								<a href="index.html">首页</a>
 							</li>
@@ -41,9 +43,9 @@
 
 					<!--左导航-->
 					<div class="left_nav">
-						<ul>
-							<li>文摘分类</li>
-							<li>
+						<ul id="nav_two">
+							<h3>文摘分类</h3>
+							<li class="current">
 								<a href="#">开示</a>
 							</li>
 							<li>
@@ -72,7 +74,49 @@
 
 					<!--内容-->
 					<div class="content_article">
-						
+						<div class="personal_center">
+							<a href="#" class="personal_style_one">
+								<img src="img/1.jpg" width="100%" height="100%" />
+							</a>
+
+							<div class="personal_style_two">
+								<h3>吴叔叔</h3>
+								<span>0积分 <a href="mine_edit.html"><i class="iconfont icon-shezhi right"></i></a></span>
+							</div>
+						</div>
+						<div class="favorite_box">
+							<div class="favorite_title">
+								<span>放生</span>
+							</div>
+							<div class="favorite_content">
+								<ul class="favoriteList">
+									<li>
+										<div class="favorite_article_box">
+											<div class="favorite_article_img">
+												<img src="http://usr.im/40x40?text=logo" />
+											</div>
+											<div class="favorite_article_content">
+												<span>logo</span>
+												<p>XXXXX</p>
+												<span style="font-size: small;">今天</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="favorite_article_box">
+											<div class="favorite_article_img">
+												<img src="http://usr.im/40x40?text=logo" />
+											</div>
+											<div class="favorite_article_content">
+												<span>logo</span>
+												<p>XXXXX</p>
+												<span style="font-size: small;">今天</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<title>文摘</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+
+	<body>
+		<div class="content">
+			<!--顶部导航栏-->
+			<div class="_global_nav _global_nav_alpha bg_color">
+				<div class="head_nav">
+					<div class="logo">
+						<img src="http://usr.im/140x50?text=logo" width="140" height="48">
+					</div>
+					<div class="head_nav_content">
+						<ul id="nav_one">
+							<li>
+								<a href="index.html">首页</a>
+							</li>
+							<li>
+								<a href="article.html">文摘</a>
+							</li>
+							<li>
+								<a href="getfree.html">放生</a>
+							</li>
+							<li>
+								<a href="mine.html">我的</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content_body">
+
+				<div class="content_frame">
+
+					<!--左导航-->
+					<div class="left_nav">
+						<ul>
+							<li>文摘分类</li>
+							<li>
+								<a href="#">开示</a>
+							</li>
+							<li>
+								<a href="#">轮回</a>
+							</li>
+							<li>
+								<a href="#">经典</a>
+							</li>
+							<li>
+								<a href="#">养生</a>
+							</li>
+							<li>
+								<a href="#">百科</a>
+							</li>
+							<li>
+								<a href="#">放生</a>
+							</li>
+							<li>
+								<a href="#">辟谷</a>
+							</li>
+							<li>
+								<a href="#">共修</a>
+							</li>
+						</ul>
+					</div>
+
+					<!--内容-->
+					<div class="content_article">
+						<div class="publish_wrap">
+							<div class="publish_head">
+								发布放生
+							</div>
+							<form>
+								<ul>
+									<li><label for="title">标题</label>
+										<input type="text" name="title" id="title"/></li>
+									<li>
+										<label>选择地区</label>
+										<span>
+											<select id="provinceSelect">
+												<option value="">选择省</option>
+											</select>
+											<select id="citySelect" lang="option">
+												<option value="">选择市</option>
+											</select>
+											<select id="areaSelect" lang="option">
+												<option value="">选择区</option>
+											</select>
+										</span>
+
+									</li>
+									<li><label for="address">详细地址</label><input type="text" name="address" id="address"/></li>
+									<li>
+										<label>选择时间</label>
+										<span>
+											<select id="provinceSelect">
+												<option value="">2016-07-08</option>
+											</select>
+											<select id="citySelect" lang="option">
+												<option value="">下午4:01</option>
+											</select>
+										</span>
+									</li>
+									<li>
+										<label>添加随喜金额</label>
+										<a id="add">+</a>
+										
+											<div class="publish_style" id="div_0">
+												<!--<input type="text" value="ssss" />
+												<input type="file" />
+												<button>选择文件</button>
+												
+												<button>删除</button>-->
+											</div>											
+									
+									</li>
+								</ul>
+
+								<input type="submit" value="发布放生" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--右侧logo-->
+			<div class="logo_box">
+				<img src="http://usr.im/185x185?text=logo" />
+				<p>微信扫一扫“立即关注”</p>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//		$(document).ready(function() {
+//			$('.head_nav_content li a').each(function() {
+//				if($($(this))[0].href == String(window.location))
+//					$(this).addClass('active');
+//			});
+//		})
+
+		i = 1;
+		document.getElementById("add").onclick = function() {
+			document.getElementById("div_0").innerHTML += '<div id="div_' + i + '" class="publish_style"><input name="text" name="text_' + i + '" type="text" placeholder="随喜金额"/><input type="file" /><button>选择文件</button><button id="delete" onclick="del('+i+')">删除</button></div>';
+			i = i + 1;
+		}
+
+		function del(o) {
+			document.getElementById("div_0").removeChild(document.getElementById("div_" + o));
+		}
+	</script>
+
+</html>
