@@ -133,12 +133,3 @@ function Close_pop_up() {
 	document.getElementById('light').style.display = 'none';
 	document.getElementById('fade').style.display = 'none'
 }
-function login_up() {
-	document.getElementById('light_one').style.display = 'block';
-	document.getElementById('fade_one').style.display = 'block'
-}
-
-function login_pop_up() {
-	document.getElementById('light_one').style.display = 'none';
-	document.getElementById('fade_one').style.display = 'none'
-}

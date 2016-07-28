@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
-		<title>文摘</title>
+		<title>发布放生</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 	</head>
 
@@ -75,17 +75,25 @@
 						<div class="publish_wrap">
 							<div class="publish_head">
 								发布放生
+
 							</div>
+
 							<form>
 								<ul>
-									<li><label for="title">标题</label>
-										<input type="text" name="title" id="title"/></li>
+									<li>
+										<label for="title">标题</label>
+										<input type="text" name="title" id="title" />
+										<span class="error1">
+											标题不能为空
+										</span>
+									</li>
 									<li>
 										<label>选择地区</label>
 										<span>
 											<select id="provinceSelect">
 												<option value="">选择省</option>
 											</select>
+											
 											<select id="citySelect" lang="option">
 												<option value="">选择市</option>
 											</select>
@@ -93,9 +101,16 @@
 												<option value="">选择区</option>
 											</select>
 										</span>
-
+										<span class="error1">
+											000
+										</span>
 									</li>
-									<li><label for="address">详细地址</label><input type="text" name="address" id="address"/></li>
+									<li>
+										<label for="address">详细地址</label><input type="text" name="address" id="address" />
+										<span class="error1">
+											请填写详细地址
+										</span>
+									</li>
 									<li>
 										<label>选择时间</label>
 										<span>
@@ -110,18 +125,17 @@
 									<li>
 										<label>添加随喜金额</label>
 										<a id="add">+</a>
-										
-											<div class="publish_style" id="div_0">
-												<!--<input type="text" value="ssss" />
+
+										<div class="publish_style" id="div_0">
+											<!--<input type="text" value="随喜金额" />
 												<input type="file" />
 												<button>选择文件</button>
 												
 												<button>删除</button>-->
-											</div>											
-									
+										</div>
+
 									</li>
 								</ul>
-
 								<input type="submit" value="发布放生" />
 							</form>
 						</div>
@@ -137,16 +151,16 @@
 	</body>
 	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-//		$(document).ready(function() {
-//			$('.head_nav_content li a').each(function() {
-//				if($($(this))[0].href == String(window.location))
-//					$(this).addClass('active');
-//			});
-//		})
+		//		$(document).ready(function() {
+		//			$('.head_nav_content li a').each(function() {
+		//				if($($(this))[0].href == String(window.location))
+		//					$(this).addClass('active');
+		//			});
+		//		})
 
 		i = 1;
 		document.getElementById("add").onclick = function() {
-			document.getElementById("div_0").innerHTML += '<div id="div_' + i + '" class="publish_style"><input name="text" name="text_' + i + '" type="text" placeholder="随喜金额"/><input type="file" /><button>选择文件</button><button id="delete" onclick="del('+i+')">删除</button></div>';
+			document.getElementById("div_0").innerHTML += '<div id="div_' + i + '" class="publish_style"><input name="text" name="text_' + i + '" type="text" placeholder="随喜金额"/><input type="file" /><button>选择文件</button><button id="delete" onclick="del(' + i + ')">删除</button></div>';
 			i = i + 1;
 		}
 
